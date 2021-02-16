@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Navbar {
+   background-color: rgb(221, 159, 221);
+   width: 100%;
+   height: 70px;
+   display: flex;
+  
+   
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Navbar-left{
+  padding: 18px;
+  flex:50%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Navbar-right{
+  flex:50%;
+}
+.links a{
+font-size: 25px;
+margin-left: 15px;
+}
+.signin{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url("./assets/weather.jpg");
+  background-size: cover;
+  position: fixed;
+  background-position: center;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0.9;
+  
+
+}
+.signin-left{
+  flex:50%;
+  
+}
+.signin-right{
+  flex:50%;
+}
+.login{
+   padding-top: 40%;
+   padding-left: 200px;
+   text-align: center;
+
+}
+.login-form{
+  width: 500px;
+  height: 400px;
+  font-size: 25px;
+  background-color: rgb(218, 188, 188);
+  border: 2px solid greenyellow;
+ 
+  
+}
+.login input{
+  font-size: large;
+  margin: 0;
+  border-radius: 2px round;
+}
+.login-button{
+  padding: 10px 20px;
+  background-color:lightgreen;
+  font-size: 30px;
+}
+.login-button:hover{
+  background-color: green;
+}
+.weather{
+  background-color: cadetblue;
+  width: 100%;
+  height: 80px;
+  
+}
+.weather-head{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+.weather-search input{
+  width: 50%;
+  height: 50px;
+  margin: 100px 100px;
+  border: 2px solid aqua;
+  font-size: 25px;
+  background-color: burlywood;
+  
+
+}
+.weather-result{
+  width: 100%;
+  height: 450px;
+  margin: auto;
+  border:1px solid darkcyan;
+}
+.weather-button{
+  padding: 10px 20px;
+  background-color:rgb(135, 216, 253);
+  font-size: 30px;
+  cursor: pointer;
+}
+.weather-fav{
+  padding: 10px 20px;
+  background-color:rgb(26, 226, 19);
+  font-size: 30px;
+  cursor: pointer;
+}
+.weather-his{
+  padding: 10px 20px;
+  background-color:rgb(231, 18, 18);
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.Api{
+  display: inline;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Api-text{
+   display: inline-block;
+}
+.Api-img{
+  text-align:center;
+  margin:10px;
+  
+}
+.Api-result table{
+  text-align: center;
+  width: 100%;
+  height: 350px;
 }
