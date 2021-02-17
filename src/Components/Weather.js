@@ -9,11 +9,10 @@ import { WiCelsius } from "weather-icons-react";
 import { WiHot } from "weather-icons-react";
 import { WiCloudUp } from "weather-icons-react";
 import { WiRaindrop } from "weather-icons-react";
-
 let con = {
   backgroundImage:
     " url('https://ak.picdn.net/shutterstock/videos/1055450339/thumb/1.jpg?ip=x480')",
-  backgroundSize: "cover",
+  backgroundSize: "100% 100%",
 };
 export class Weather extends Component {
   state = {
@@ -113,7 +112,6 @@ export class Weather extends Component {
         tog={this.onhis}
       />
     );
-
     const fav = (
       <Favourite
         val={this.state.fav}
@@ -145,97 +143,97 @@ export class Weather extends Component {
             <WiDaySunnyOvercast size={50} color="#FFD700" />
             Weather App
           </h2>
-          <h1>{"dinesh"}</h1>
-          <h1>{"images"}</h1>
+          <h1>{this.props.name}</h1>
+          <h1></h1>
         </div>
-        <div className="weather-search" style={con}>
-          <div className="Api">
-            <div className="Api-text">
-              <input
-                type="text"
-                onChange={(e) => {
-                  this.setState({
-                    city: e.target.value,
-                  });
-                }}
-              />
-              <WiRaindrop
-                size={100}
-                color="red"
-                onClick={() => this.setState({ isfav: true })}
-              />
-              <button className="weather-button" onClick={this.getweather}>
-                {" "}
-                get weather
-              </button>
-              <button
-                onClick={() => this.setState({ modalhis: true })}
-                className="weather-his"
-              >
-                History
-              </button>
-              <button
-                onClick={() => this.setState({ modalfav: true })}
-                className="weather-fav"
-              >
-                Favourite
-              </button>
-            </div>
-            <div className="Api-img">
-              <div>{history}</div>
-              <div>{fav}</div>
-              <div className="Api-result">
-                <table border="2px">
-                  <tr>
-                    <td colSpan="3">
-                      {" "}
-                      <h1>{this.state.city}</h1>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h1>
-                        Humditiy={this.state.humidity}
-                        {<WiDaySunny size={50} color="#851478" />}
-                      </h1>
-                    </td>
-                    <td>
-                      {" "}
-                      <h1>
-                        Pressure={this.state.pressure}
-                        <WiCloudUp size={50} color="#851478" />
-                      </h1>
-                    </td>
-                    <td>
-                      {" "}
-                      <h1>
-                        Windspeed={this.state.Windspeed}
-                        <WiHot size={50} color="#851478" />
-                      </h1>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h1>
-                        Description={this.state.Description}
-                        <WiHot size={50} color="#851478" />
-                      </h1>
-                    </td>
-                    <td>
-                      <h1>
-                        Deg={this.state.deg}
-                        {<WiCelsius size={50} color="#851478" />}
-                      </h1>
-                    </td>
-                    <td>
-                      <h1>
-                        Temp={this.state.temp}
-                        <WiHot size={50} color="#851478" />
-                      </h1>
-                    </td>
-                  </tr>
-                </table>
-              </div>
+        <div className="" style={con}>
+          <div className="weather-search">
+            <input
+              type="text"
+              onChange={(e) => {
+                this.setState({
+                  city: e.target.value,
+                });
+              }}
+            />
+          </div>
+          <div className="Api-text">
+            <WiRaindrop
+              size={100}
+              color="red"
+              onClick={() => this.setState({ isfav: true })}
+            />
+            <button className="weather-button" onClick={this.getweather}>
+              {" "}
+              get weather
+            </button>
+            <button
+              onClick={() => this.setState({ modalhis: true })}
+              className="weather-his"
+            >
+              History
+            </button>
+            <button
+              onClick={() => this.setState({ modalfav: true })}
+              className="weather-fav"
+            >
+              Favourite
+            </button>
+          </div>
+          <div className="Api-img">
+            <div>{history}</div>
+            <div>{fav}</div>
+            <div className="Api-result">
+              <table border="2px">
+                <tr>
+                  <td colSpan="3">
+                    {" "}
+                    <h1>{this.state.city}</h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h1>
+                      Humditiy={this.state.humidity}
+                      {<WiDaySunny size={50} color="#851478" />}
+                    </h1>
+                  </td>
+                  <td>
+                    {" "}
+                    <h1>
+                      Pressure={this.state.pressure}
+                      <WiCloudUp size={50} color="#851478" />
+                    </h1>
+                  </td>
+                  <td>
+                    {" "}
+                    <h1>
+                      Windspeed={this.state.Windspeed}
+                      <WiHot size={50} color="#851478" />
+                    </h1>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <h1>
+                      Description={this.state.Description}
+                      <WiHot size={50} color="#851478" />
+                    </h1>
+                  </td>
+                  <td>
+                    <h1>
+                      Deg={this.state.deg}
+                      {<WiCelsius size={50} color="#851478" />}
+                    </h1>
+                  </td>
+                  <td>
+                    <h1>
+                      Temp={this.state.temp}
+                      <WiHot size={50} color="#851478" />
+                    </h1>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>

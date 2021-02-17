@@ -5,13 +5,15 @@ import Login from "./Login";
 import Weather from "./Weather";
 export class Signin extends Component {
   render() {
+    console.log(this.props.islog);
     return (
       <div className="signin">
         <div className="signin-left">
-          <Weather />
+          {" "}
+          <h1></h1>
         </div>
         <div className="signin-right">
-          <Login />
+          <Login log={this.props.islog} />
         </div>
       </div>
     );

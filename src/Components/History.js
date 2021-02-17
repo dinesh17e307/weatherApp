@@ -10,6 +10,8 @@ function History(props) {
     <div>
       <Modal
         isOpen={open}
+        height="500px"
+        width="200px"
         style={{
           overlay: {
             backgroundColor: "lightgoldenrodyellow",
